@@ -1,0 +1,22 @@
+CHẠY BÀI LAB 1 TRÊN VISUAL STUDIO 2022
+
+Yêu cầu: Visual Studio 2022 (bản 17.8 trở lên) có workload ".NET desktop development"; SQL Server + SSMS.
+
+B1. Giải nén thư mục này.
+B2. Mở SSMS -> File -> Open -> File -> chọn Database.sql -> Execute (F5).
+    Refresh Databases, kiểm tra có database HotelManagement (12 bảng).
+B3. Mở file HotelManagement.sln bằng Visual Studio 2022 (đợi nó tự khôi phục NuGet, cần có mạng).
+B4. Mở HotelManagement/Models/HotelManagementContext.custom.cs, sửa dòng Server=... cho đúng máy bạn:
+      (localdb)\\MSSQLLocalDB   |   .\\SQLEXPRESS   |   localhost
+    (trong chuỗi C# phải viết 2 dấu \\ ; xem Server name ở màn hình đăng nhập SSMS)
+B5. Bấm F5 (nút ▶). Đăng nhập: admin / 1234
+
+Nếu build lỗi: dán nguyên thông báo lỗi (cửa sổ Error List) cho Claude.
+
+--- GHI CHÚ BẢN CÓ ẢNH (mục III.3 tài liệu lab) ---
+- Thư mục HotelManagement/Resources chứa 104 ảnh/icon lấy từ Resources.rar của thầy.
+- File Properties/Resources.resx + Resources.Designer.cs đã khai báo sẵn các ảnh, dùng trong code như:
+  Properties.Resources.pictureIcon, Properties.Resources.edit, ...
+- Ảnh đã được chèn vào: Đăng nhập (pictureIcon + DangNhap), Form chính (Menu, user, 12 icon menu),
+  Trang chủ (pictureIcon), icon tìm kiếm ở Sơ đồ phòng / Phòng / Loại phòng,
+  cột ảnh Phòng/Sửa/Xóa ở danh sách phòng, cột ảnh Giường/Tiện nghi/Cập nhật ở danh sách loại phòng.
