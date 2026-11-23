@@ -7,7 +7,7 @@ public partial class HotelManagementContext
     // Đổi Server cho đúng máy của bạn: "." | "localhost" | ". \ \ SQLEXPRESS" |  "(localdb) \ \ MSSQLLocalDB" 
     private const string ConnectionString =
 
-   "Server=MSI\\SQLEXPRESS;Database=HotelManagement;Trusted_Connection=True;TrustServerCertificate=True;";
+   "Server=.;Database=HotelManagement;Trusted_Connection=True;TrustServerCertificate=True;";
     // Constructor không tham số để dùng: new HotelManagementContext() 
     public HotelManagementContext()
     {
